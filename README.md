@@ -80,7 +80,7 @@ console.log(encodeForBarcodeFont('(90)1234567890'));
 ```
 Output:
 ```
-ÍÊz,BXnzsÎ
+ÒÏz,BXnzsÓ
 ```
 ## License
 
