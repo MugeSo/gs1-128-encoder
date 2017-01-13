@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "typing": "lib/index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
