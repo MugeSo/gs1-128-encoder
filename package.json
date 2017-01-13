@@ -1,0 +1,30 @@
+{
+  "name": "gs1-128-encoder",
+  "version": "1.0.0",
+  "description": "Encode GS1-128 string like (91)124578912345(92)5435479",
+  "main": "lib/index.js",
+  "typing": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MugeSo/gs1-128-encoder.git"
+  },
+  "keywords": [
+    "GS1-128",
+    "barcode"
+  ],
+  "author": "TANAKA Koichi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MugeSo/gs1-128-encoder/issues"
+  },
+  "homepage": "https://github.com/MugeSo/gs1-128-encoder#readme",
+  "devDependencies": {
+    "@types/mocha": "^2.2.37",
+    "@types/node": "^7.0.0",
+    "mocha": "^3.2.0",
+    "typescript": "^2.1.5"
+  }
+}
