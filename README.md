@@ -1,7 +1,7 @@
 # GS1-128 Encoder
 
 This module encodes GS1-128 string (e.g. `(90)1234567890`) to bits (e.g. `110100111...`), weights (e.g. `211232411...`),
- code array (e.g. `[105, 102, 90, ...]`) or string for [barcode font](http://www.jtbarton.com/Barcodes/Code128.aspx#FreeCode128).
+ code array (e.g. `[105, 102, 90, ...]`) or string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
 
 [![NPM](https://nodei.co/npm/gs1-128-encoder.png)](https://nodei.co/npm/gs1-128-encoder/)
 
@@ -69,7 +69,8 @@ Output:
 
 ### encodeForBarcodeFont
 
-This function encodes GS1-128 string to string for [barcode font](http://www.jtbarton.com/Barcodes/Code128.aspx#FreeCode128).
+This function encodes GS1-128 string to string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
+[code-128-encoder](https://www.npmjs.com/package/code-128-encoder) also includes fonts using the same mapping.
 
 Code:
 ```typescript
