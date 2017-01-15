@@ -121,7 +121,6 @@ const mapCodeToWeight = createMap('code', 'weights');
 const mapCodeToAscii = createMap('code', 'ascii');
 const mapCToCode = createMap('C', 'code');
 const START_TYPE_C = 105;
-const FUNC_1 = 102;
 const STOP = 106;
 
 function createMap(fromProp, toProp) {
@@ -155,7 +154,7 @@ export function encodeToCodeArray(string: string) {
         throw new TypeError(`"${string}" is a invalid GS1-128 string.`);
     }
 
-    const codes = [START_TYPE_C, FUNC_1].concat(string.replace(/[()]/g, '').match(/\d{2}/g).map(mapCToCode));
+    const codes = [START_TYPE_C].concat(string.replace(/\((\d+)\)/g, 'F1$1').replace(/^\d+$/, 'F1$&').match(/.{2}/g).map(mapCToCode));
 
     const checksum = modulus103(codes);
 
