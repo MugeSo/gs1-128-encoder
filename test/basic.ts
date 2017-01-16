@@ -2,6 +2,7 @@
 
 import * as assert from 'assert';
 import {encodeToBits, encodeToCodeArray, encodeToWeights, encodeForBarcodeFont} from "../lib/index";
+import GS1_128_encoder from '../lib/index';
 
 describe('basic-usage', () => {
     [
@@ -80,4 +81,9 @@ describe('basic-usage', () => {
             }
         });
     });
+
+    it('can be called via default of module', () => {
+        GS1_128_encoder.encodeToWeights('1223545');
+    });
 });
+

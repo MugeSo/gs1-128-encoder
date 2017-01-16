@@ -36,3 +36,10 @@ export function encodeForBarcodeFont(string: string) {
 export function encodeToCodeArray(string: string) {
     return code128.encodeToCodeArray(addFUNC1(string));
 }
+
+export default {
+    encodeToBits,
+    encodeToWeights,
+    encodeToCodeArray,
+    encodeForBarcodeFont
+};
