@@ -26,6 +26,13 @@ describe('basic-usage', () => {
             [ 105, 102, 91, 12, 102, 92, 1, 63, 106 ],
             'ÒÏ{,Ï|!_Ó'
         ],
+        [
+            '(400)JP1100A(90)500FA',
+            '1101001000011110101110110010011101001110110010011101100101101110001110111011010111011110110001001001101100110010111101110101000110001111010111011100101100101110111101000100110011011001100101111011101000110001010100011000111011110101100011101011',
+            '2112144111312212311231221231221121333131211131412312122122221141311113234111313211221131411312222122221141311323111113233141112331112',
+            [ 104, 102, 20, 16, 16, 42, 48, 99, 11, 0, 100, 33, 102, 25, 99, 5, 0, 100, 38, 33, 60, 106],
+            'ÑÏ400JPÌ+ ÍAÏ9Ì% ÍFA\\Ó'
+        ]
     ].forEach((condition:[string, string, string, number[], string]) => {
         const [input, bits, weights, codeArray, stringForBarcodeFont] = condition;
         describe(`with input "${input}"`, () => {
@@ -50,7 +57,7 @@ describe('basic-usage', () => {
                 );
             });
 
-            it('should encode to string for barcode font', () => {
+            it('should encode to rest for barcode font', () => {
                 assert.equal(
                     encodeForBarcodeFont(input),
                     stringForBarcodeFont
