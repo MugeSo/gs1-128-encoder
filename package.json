@@ -14,7 +14,9 @@
   },
   "keywords": [
     "GS1-128",
-    "barcode"
+    "barcode",
+    "code128",
+    "Code 128"
   ],
   "author": "TANAKA Koichi",
   "license": "MIT",
