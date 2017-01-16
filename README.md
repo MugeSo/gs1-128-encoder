@@ -2,6 +2,7 @@
 
 This module encodes GS1-128 string (e.g. `"(90)1234567890"`) to bits (e.g. `"110100111..."`), weights (e.g. `"211232411..."`),
  code array (e.g. `[105, 102, 90, ...]`) or string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
+And also provides code 128 encoder.
 
 [![NPM](https://nodei.co/npm/gs1-128-encoder.png)](https://nodei.co/npm/gs1-128-encoder/)
 
@@ -11,19 +12,27 @@ This is inspired by [code-128-encoder](https://www.npmjs.com/package/code-128-en
 
 ## Usage
 
-This module is ES6 style module and provides following functions.
+This module is ES6 style module and provides following functions. The default of this es6 module is an object with functions.
+```javascript
+import {encodeToBits} from "gs1-128-encoder";
+encodeToBits('(90)1234');
 
-GS1-128 string can be following style:
+import gs1_128_encoder from "gs1-128-encoder";
+gs1_128_encoder.encodeToBits('(90)1234');
+```
+
+### Functions
+
+Argument of functions are GS1-128 HRI string, which is shaped with following format:
 ```javascript
 "(90)123456789" // with '()' for AI
 "90123456789"   // without '()' for AI (this works only for single application)
 "(91)12(92)01"  // multiple application
 ```
 
-### Functions
 #### encodeToBits
 
-This function encodes GS1-128 string to bits string for rendering barcode.
+This function encodes GS1-128 HRI string to bits string for rendering barcode.
 
 Code:
 ```javascript
@@ -38,7 +47,7 @@ Output:
 
 #### encodeToWeights
 
-This function encodes GS1-128 string to weights string for rendering barcode.
+This function encodes GS1-128 HRI string to weights string for rendering barcode.
 
 The first digit of output string is width of leftmost bar of barcode.
 The second digit is width of blank and the third digit is width of next bar.
@@ -55,7 +64,7 @@ Output:
 ```
 #### encodeToCodeArray
 
-This function encodes GS1-128 string to array of CODE128 code number.
+This function encodes GS1-128 HRI string to array of CODE128 code number.
 
 Code:
 ```javascript
@@ -70,7 +79,7 @@ Output:
 
 #### encodeForBarcodeFont
 
-This function encodes GS1-128 string to string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
+This function encodes GS1-128 HRI string to string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
 [code-128-encoder](https://www.npmjs.com/package/code-128-encoder) also includes fonts using the same mapping.
 
 Code:
