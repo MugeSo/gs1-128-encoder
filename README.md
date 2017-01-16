@@ -1,6 +1,6 @@
 # GS1-128 Encoder
 
-This module encodes GS1-128 string (e.g. `(90)1234567890`) to bits (e.g. `110100111...`), weights (e.g. `211232411...`),
+This module encodes GS1-128 string (e.g. `"(90)1234567890"`) to bits (e.g. `"110100111..."`), weights (e.g. `"211232411..."`),
  code array (e.g. `[105, 102, 90, ...]`) or string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
 
 [![NPM](https://nodei.co/npm/gs1-128-encoder.png)](https://nodei.co/npm/gs1-128-encoder/)
@@ -14,18 +14,19 @@ This is inspired by [code-128-encoder](https://www.npmjs.com/package/code-128-en
 This module is ES6 style module and provides following functions.
 
 GS1-128 string can be following style:
-```
-(90)123456789 // with '()' for AI
-90123456789   // without '()' for AI
-(91)12(92)01  // multiple application
+```javascript
+"(90)123456789" // with '()' for AI
+"90123456789"   // without '()' for AI (this works only for single application)
+"(91)12(92)01"  // multiple application
 ```
 
-### encodeToBits
+### Functions
+#### encodeToBits
 
 This function encodes GS1-128 string to bits string for rendering barcode.
 
 Code:
-```typescript
+```javascript
 import {encodeToBits} from "gs1-128-encoder";
 
 console.log(encodeToBits('(90)1234567890'));
@@ -35,7 +36,7 @@ Output:
 1101001110011110101110110111101101011001110010001011000111000101101100001010011011110110101111001001100011101011
 ```
 
-### encodeToWeights
+#### encodeToWeights
 
 This function encodes GS1-128 string to weights string for rendering barcode.
 
@@ -43,7 +44,7 @@ The first digit of output string is width of leftmost bar of barcode.
 The second digit is width of blank and the third digit is width of next bar.
 
 Code:
-```typescript
+```javascript
 import {encodeToWeights} from "gs1-128-encoder";
 
 console.log(encodeToWeights('(90)1234567890'));
@@ -52,12 +53,12 @@ Output:
 ```
 2112324111312141211122321311233311212411122141211142122331112
 ```
-### encodeToCodeArray
+#### encodeToCodeArray
 
 This function encodes GS1-128 string to array of CODE128 code number.
 
 Code:
-```typescript
+```javascript
 import {encodeToCodeArray} from "gs1-128-encoder";
 
 console.log(encodeToCodeArray('(90)1234567890'));
@@ -67,13 +68,13 @@ Output:
 [ 105, 102, 90, 12, 34, 56, 78, 90, 83, 106 ]
 ```
 
-### encodeForBarcodeFont
+#### encodeForBarcodeFont
 
 This function encodes GS1-128 string to string for [barcode font](http://grandzebu.net/informatique/codbar-en/code128.htm).
 [code-128-encoder](https://www.npmjs.com/package/code-128-encoder) also includes fonts using the same mapping.
 
 Code:
-```typescript
+```javascript
 import {encodeForBarcodeFont} from "gs1-128-encoder";
 
 console.log(encodeForBarcodeFont('(90)1234567890'));
@@ -81,6 +82,18 @@ console.log(encodeForBarcodeFont('(90)1234567890'));
 Output:
 ```
 ÒÏz,BXnzsÓ
+```
+
+### Code 128 Encoding
+
+This module also provide code 128 encoder submodule.
+
+Code 128 encoder has the same signature functions as main functions. See [Functions](#Functions).
+
+```javascript
+import {code128} from "gs1-128-encoder";
+
+console.log(code128.encodeForBarcodeFont('String to encode'));
 ```
 ## License
 
