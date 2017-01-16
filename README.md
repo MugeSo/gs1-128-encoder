@@ -88,7 +88,7 @@ Output:
 
 This module also provide code 128 encoder submodule.
 
-Code 128 encoder has the same signature functions as main functions. See [Functions](#Functions).
+Code 128 encoder has the same signature functions as main functions. See [Functions](#functions).
 
 ```javascript
 import {code128} from "gs1-128-encoder";
