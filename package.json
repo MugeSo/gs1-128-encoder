@@ -1,6 +1,6 @@
 {
   "name": "gs1-128-encoder",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Encode GS1-128 string like (91)124578912345(92)5435479",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
