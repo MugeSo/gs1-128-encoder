@@ -284,6 +284,12 @@ export namespace code128 {
 
         return sum % 103;
     }
+
+    export const FNC1 = mapCodeToAscii(102);
+    export const FNC2 = mapCodeToAscii(97);
+    export const FNC3 = mapCodeToAscii(96);
+    export const FNC4A = mapCodeToAscii(101);
+    export const FNC4B = mapCodeToAscii(100);
 }
 
 export default code128;

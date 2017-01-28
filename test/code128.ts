@@ -96,4 +96,14 @@ describe('code128 submodule', () => {
             assert.equal(encodeToCodeArray(string)[4], 101);
         });
     });
+
+    [
+        ['<null><FNC1><FNC2><FNC3><FNC4>', `\x00${code128.FNC1}${code128.FNC2}${code128.FNC3}${code128.FNC4A}`, [103, 64, 102, 97, 96, 101, 6, 106]],
+        ['a<FNC1><FNC2><FNC3><FNC4>', `a${code128.FNC1}${code128.FNC2}${code128.FNC3}${code128.FNC4B}`, [104, 65, 102, 97, 96, 100, 3, 106]]
+    ].forEach((condition: [string, string, number[]]) => {
+        const [title, input, expected] = condition;
+        it(`should encode "${title}" to code array`, () => {
+            assert.deepEqual(encodeToCodeArray(input), expected)
+        })
+    });
 });
