@@ -214,7 +214,7 @@ function consumeTypeA(context: Context): number[] {
         context.consume = consumeTypeB;
     }
 
-    return target.replace(/[\x61-\x7f]/g, `${SHIFT_CHAR}$0`).split('').map(mapAToCode);
+    return target.replace(/[\x60-\x7f]/g, match => SHIFT_CHAR + mapBtoA(match)).split('').map(mapAToCode);
 }
 
 function consumeTypeB(context: Context): number[] {
@@ -237,7 +237,7 @@ function consumeTypeB(context: Context): number[] {
         context.consume = consumeTypeA;
     }
 
-    return target.replace(/[\x00-\x1f]/g, `${SHIFT_CHAR}$0`).split('').map(mapBToCode);
+    return target.replace(/[\x00-\x1f]/g, match => SHIFT_CHAR + mapAtoB(match)).split('').map(mapBToCode);
 }
 
 function consumeTypeC(context: Context): number[] {

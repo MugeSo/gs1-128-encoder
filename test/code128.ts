@@ -52,11 +52,12 @@ describe('code128 submodule', () => {
     [
         'abc\x00',
         'abc\x00abc\x00',
-        '\x00BCaABC',
-        '\x00BCaABC\x00a',
+        '\x00BC`ABC',
+        '\x00BC`ABC\x00a',
     ].forEach(string => {
         it(`should insert shift for "${string}"`, () => {
             assert.equal(encodeToCodeArray(string)[4], 98);
+            assert.equal(encodeToCodeArray(string)[5], 64);
         });
     });
 
