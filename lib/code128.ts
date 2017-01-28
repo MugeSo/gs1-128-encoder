@@ -73,36 +73,36 @@ const codes = [
     {"code": 63, "ascii": "_", "A": "_", "B": "_", "C": "63", "bits": "10100110000", "weights": "111224"},
     {"code": 64, "ascii": "`", "A": "\x00", "B": "`", "C": "64", "bits": "10100001100", "weights": "111422"},
     {"code": 65, "ascii": "a", "A": "\x01", "B": "a", "C": "65", "bits": "10010110000", "weights": "121124"},
-    {"code": 66, "ascii": "b", "A": "\x01", "B": "b", "C": "66", "bits": "10010000110", "weights": "121421"},
-    {"code": 67, "ascii": "c", "A": "\x02", "B": "c", "C": "67", "bits": "10000101100", "weights": "141122"},
-    {"code": 68, "ascii": "d", "A": "\x03", "B": "d", "C": "68", "bits": "10000100110", "weights": "141221"},
-    {"code": 69, "ascii": "e", "A": "\x04", "B": "e", "C": "69", "bits": "10110010000", "weights": "112214"},
-    {"code": 70, "ascii": "f", "A": "\x05", "B": "f", "C": "70", "bits": "10110000100", "weights": "112412"},
-    {"code": 71, "ascii": "g", "A": "\x06", "B": "g", "C": "71", "bits": "10011010000", "weights": "122114"},
-    {"code": 72, "ascii": "h", "A": "\x07", "B": "h", "C": "72", "bits": "10011000010", "weights": "122411"},
-    {"code": 73, "ascii": "i", "A": "\x08", "B": "i", "C": "73", "bits": "10000110100", "weights": "142112"},
-    {"code": 74, "ascii": "j", "A": "\x09", "B": "j", "C": "74", "bits": "10000110010", "weights": "142211"},
-    {"code": 75, "ascii": "k", "A": "\x0a", "B": "k", "C": "75", "bits": "11000010010", "weights": "241211"},
-    {"code": 76, "ascii": "l", "A": "\x0b", "B": "l", "C": "76", "bits": "11001010000", "weights": "221114"},
-    {"code": 77, "ascii": "m", "A": "\x0c", "B": "m", "C": "77", "bits": "11110111010", "weights": "413111"},
-    {"code": 78, "ascii": "n", "A": "\x0d", "B": "n", "C": "78", "bits": "11000010100", "weights": "241112"},
-    {"code": 79, "ascii": "o", "A": "\x0e", "B": "o", "C": "79", "bits": "10001111010", "weights": "134111"},
-    {"code": 80, "ascii": "p", "A": "\x0f", "B": "p", "C": "80", "bits": "10100111100", "weights": "111242"},
-    {"code": 81, "ascii": "q", "A": "\x10", "B": "q", "C": "81", "bits": "10010111100", "weights": "121142"},
-    {"code": 82, "ascii": "r", "A": "\x11", "B": "r", "C": "82", "bits": "10010011110", "weights": "121241"},
-    {"code": 83, "ascii": "s", "A": "\x12", "B": "s", "C": "83", "bits": "10111100100", "weights": "114212"},
-    {"code": 84, "ascii": "t", "A": "\x13", "B": "t", "C": "84", "bits": "10011110100", "weights": "124112"},
-    {"code": 85, "ascii": "u", "A": "\x14", "B": "u", "C": "85", "bits": "10011110010", "weights": "124211"},
-    {"code": 86, "ascii": "v", "A": "\x15", "B": "v", "C": "86", "bits": "11110100100", "weights": "411212"},
-    {"code": 87, "ascii": "w", "A": "\x16", "B": "w", "C": "87", "bits": "11110010100", "weights": "421112"},
-    {"code": 88, "ascii": "x", "A": "\x17", "B": "x", "C": "88", "bits": "11110010010", "weights": "421211"},
-    {"code": 89, "ascii": "y", "A": "\x18", "B": "y", "C": "89", "bits": "11011011110", "weights": "212141"},
-    {"code": 90, "ascii": "z", "A": "\x19", "B": "z", "C": "90", "bits": "11011110110", "weights": "214121"},
-    {"code": 91, "ascii": "{", "A": "\x1a", "B": "{", "C": "91", "bits": "11110110110", "weights": "412121"},
-    {"code": 92, "ascii": "|", "A": "\x1b", "B": "|", "C": "92", "bits": "10101111000", "weights": "111143"},
-    {"code": 93, "ascii": "}", "A": "\x1c", "B": "}", "C": "93", "bits": "10100011110", "weights": "111341"},
-    {"code": 94, "ascii": "~", "A": "\x1d", "B": "~", "C": "94", "bits": "10001011110", "weights": "131141"},
-    {"code": 95, "ascii": "È", "A": "È", "B": "È", "C": "95", "bits": "10111101000", "weights": "114113"},
+    {"code": 66, "ascii": "b", "A": "\x02", "B": "b", "C": "66", "bits": "10010000110", "weights": "121421"},
+    {"code": 67, "ascii": "c", "A": "\x03", "B": "c", "C": "67", "bits": "10000101100", "weights": "141122"},
+    {"code": 68, "ascii": "d", "A": "\x04", "B": "d", "C": "68", "bits": "10000100110", "weights": "141221"},
+    {"code": 69, "ascii": "e", "A": "\x05", "B": "e", "C": "69", "bits": "10110010000", "weights": "112214"},
+    {"code": 70, "ascii": "f", "A": "\x06", "B": "f", "C": "70", "bits": "10110000100", "weights": "112412"},
+    {"code": 71, "ascii": "g", "A": "\x07", "B": "g", "C": "71", "bits": "10011010000", "weights": "122114"},
+    {"code": 72, "ascii": "h", "A": "\x08", "B": "h", "C": "72", "bits": "10011000010", "weights": "122411"},
+    {"code": 73, "ascii": "i", "A": "\x09", "B": "i", "C": "73", "bits": "10000110100", "weights": "142112"},
+    {"code": 74, "ascii": "j", "A": "\x0a", "B": "j", "C": "74", "bits": "10000110010", "weights": "142211"},
+    {"code": 75, "ascii": "k", "A": "\x0b", "B": "k", "C": "75", "bits": "11000010010", "weights": "241211"},
+    {"code": 76, "ascii": "l", "A": "\x0c", "B": "l", "C": "76", "bits": "11001010000", "weights": "221114"},
+    {"code": 77, "ascii": "m", "A": "\x0d", "B": "m", "C": "77", "bits": "11110111010", "weights": "413111"},
+    {"code": 78, "ascii": "n", "A": "\x0e", "B": "n", "C": "78", "bits": "11000010100", "weights": "241112"},
+    {"code": 79, "ascii": "o", "A": "\x0f", "B": "o", "C": "79", "bits": "10001111010", "weights": "134111"},
+    {"code": 80, "ascii": "p", "A": "\x10", "B": "p", "C": "80", "bits": "10100111100", "weights": "111242"},
+    {"code": 81, "ascii": "q", "A": "\x11", "B": "q", "C": "81", "bits": "10010111100", "weights": "121142"},
+    {"code": 82, "ascii": "r", "A": "\x12", "B": "r", "C": "82", "bits": "10010011110", "weights": "121241"},
+    {"code": 83, "ascii": "s", "A": "\x13", "B": "s", "C": "83", "bits": "10111100100", "weights": "114212"},
+    {"code": 84, "ascii": "t", "A": "\x14", "B": "t", "C": "84", "bits": "10011110100", "weights": "124112"},
+    {"code": 85, "ascii": "u", "A": "\x15", "B": "u", "C": "85", "bits": "10011110010", "weights": "124211"},
+    {"code": 86, "ascii": "v", "A": "\x16", "B": "v", "C": "86", "bits": "11110100100", "weights": "411212"},
+    {"code": 87, "ascii": "w", "A": "\x17", "B": "w", "C": "87", "bits": "11110010100", "weights": "421112"},
+    {"code": 88, "ascii": "x", "A": "\x18", "B": "x", "C": "88", "bits": "11110010010", "weights": "421211"},
+    {"code": 89, "ascii": "y", "A": "\x19", "B": "y", "C": "89", "bits": "11011011110", "weights": "212141"},
+    {"code": 90, "ascii": "z", "A": "\x1a", "B": "z", "C": "90", "bits": "11011110110", "weights": "214121"},
+    {"code": 91, "ascii": "{", "A": "\x1b", "B": "{", "C": "91", "bits": "11110110110", "weights": "412121"},
+    {"code": 92, "ascii": "|", "A": "\x1c", "B": "|", "C": "92", "bits": "10101111000", "weights": "111143"},
+    {"code": 93, "ascii": "}", "A": "\x1d", "B": "}", "C": "93", "bits": "10100011110", "weights": "111341"},
+    {"code": 94, "ascii": "~", "A": "\x1e", "B": "~", "C": "94", "bits": "10001011110", "weights": "131141"},
+    {"code": 95, "ascii": "È", "A": "\x1f", "B": "\x7f", "C": "95", "bits": "10111101000", "weights": "114113"},
     {"code": 96, "ascii": "É", "A": "É", "B": "É", "C": "96", "bits": "10111100010", "weights": "114311"},
     {"code": 97, "ascii": "Ê", "A": "Ê", "B": "Ê", "C": "97", "bits": "11110101000", "weights": "411113"},
     {"code": 98, "ascii": "Ë", "A": "Ë", "B": "Ë", "C": "98", "bits": "11110100010", "weights": "411311"},
@@ -122,6 +122,9 @@ const mapCodeToAscii = createMap('code', 'ascii');
 const mapAToCode = createMap('A', 'code');
 const mapBToCode = createMap('B', 'code');
 const mapCToCode = createMap('C', 'code');
+const mapAtoB = createMap('A', 'B');
+const mapBtoA = createMap('B', 'A');
+
 const TO_TYPE_C = 99;
 const TO_TYPE_B = 100;
 const TO_TYPE_A = 101;
@@ -176,7 +179,7 @@ function createContext(string): Context {
         };
     }
 
-    if (/^[\x20-\x60]*[\x00-\x1f]/.test(string)) {
+    if (/^[\x20-\x5f]*[\x00-\x1f]/.test(string)) {
         return {
             startCode: START_TYPE_A,
             rest: string,
@@ -192,7 +195,7 @@ function createContext(string): Context {
 }
 
 function consumeTypeA(context: Context): number[] {
-    const regexResult = /(\d{4,})|([\x61-\x7f][\x20-\x60]*[\x61-\x7f])/.exec(context.rest);
+    const regexResult = /(\d{4,})|([\x60-\x7f][\x20-\x5f]*[\x60-\x7f])/.exec(context.rest);
     let target;
 
     if (regexResult === null) {
@@ -215,7 +218,7 @@ function consumeTypeA(context: Context): number[] {
 }
 
 function consumeTypeB(context: Context): number[] {
-    const regexResult = /(\d{4,})|([\x00-\x1f][\x20-\x60]*[\x00-\x1f])/.exec(context.rest);
+    const regexResult = /(\d{4,})|([\x00-\x1f][\x20-\x5f]*[\x00-\x1f])/.exec(context.rest);
     let target;
 
     if (regexResult === null) {
@@ -241,7 +244,7 @@ function consumeTypeC(context: Context): number[] {
     const [, target, rest] = context.rest.match(/^((?:\d{2}|Ï)+)(.*)$/);
 
     context.rest = rest;
-    if (/^[\x20-\x60]*[\x00-\x1f]/.test(rest)) {
+    if (/^[\x20-\x5f]*[\x00-\x1f]/.test(rest)) {
         context.startCode = TO_TYPE_A;
         context.consume = consumeTypeA;
     } else {
