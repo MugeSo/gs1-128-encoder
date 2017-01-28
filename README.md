@@ -26,8 +26,9 @@ gs1_128_encoder.encodeToBits('(90)1234');
 Argument of functions are GS1-128 HRI string, which is shaped with following format:
 ```javascript
 "(90)123456789" // with '()' for AI
-"90123456789"   // without '()' for AI (this works only for single application)
+"90123456789"   // without '()' for AI (only for single application)
 "(91)12(92)01"  // multiple application
+"(21)00ABC00a"  // of course you can use application with alphabet data
 ```
 
 #### encodeToBits
@@ -103,6 +104,16 @@ Code 128 encoder has the same signature functions as main functions. See [Functi
 import {code128} from "gs1-128-encoder";
 
 console.log(code128.encodeForBarcodeFont('String to encode'));
+```
+
+`code128.FNC1`, `code128.FNC2`, `code128.FNC3`, `code128.FNC4A`, `code128.FNC4B` are available as special characters for FNCn.
+`FNC4A` is for type A and `FNC4B` is for type B.
+
+```javascript
+import {code128} from "gs1-128-encoder";
+
+console.log(code128.encodeForBarcodeFont(`\x00${code128.FNC1}${code128.FNC2}${code128.FNC3}${code128.FNC4A}`));
+console.log(code128.encodeForBarcodeFont(`a${code128.FNC1}${code128.FNC2}${code128.FNC3}${code128.FNC4B}`));
 ```
 ## License
 
