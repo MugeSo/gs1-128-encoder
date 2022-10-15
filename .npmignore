@@ -50,3 +50,7 @@ jspm_packages
 
 # InteliJ
 .idea
+
+# TypeScript
+*.ts
+!*.d.ts
